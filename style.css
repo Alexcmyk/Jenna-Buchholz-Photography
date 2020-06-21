@@ -325,7 +325,7 @@ section.s4 div.circle {
   }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 415px) {
   div.square {
     width: 40px;
     height: 40px;
@@ -345,6 +345,6 @@ section.s4 div.circle {
 
   section.s2 div.content img,
   section.s4 div.content img {
-    max-width: 300px;
+    max-width: 320px;
   }
 }
