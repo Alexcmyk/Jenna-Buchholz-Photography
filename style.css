@@ -293,3 +293,34 @@ section.s4 div.square {
 section.s4 div.circle {
   background-color: #5982a0;
 }
+
+@media (max-width: 850px) {
+  section.s2 div.content img,
+  section.s4 div.content img {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 625px) {
+  section.s1 div.content img,
+  section.s3 div.content img {
+    max-width: 300px;
+  }
+
+  section.s2 div.content img,
+  section.s4 div.content img {
+    max-width: 400px;
+  }
+
+  div.square {
+    width: 70px;
+    height: 70px;
+    left: -30px;
+  }
+
+  div.circle {
+    width: 70px;
+    height: 70px;
+    right: -30px;
+  }
+}
