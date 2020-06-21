@@ -324,3 +324,27 @@ section.s4 div.circle {
     right: -30px;
   }
 }
+
+@media (max-width: 500px) {
+  div.square {
+    width: 40px;
+    height: 40px;
+    left: -10px;
+  }
+
+  div.circle {
+    width: 40px;
+    height: 40px;
+    right: -10px;
+  }
+
+  section.s1 div.content img,
+  section.s3 div.content img {
+    max-width: 250px;
+  }
+
+  section.s2 div.content img,
+  section.s4 div.content img {
+    max-width: 300px;
+  }
+}
