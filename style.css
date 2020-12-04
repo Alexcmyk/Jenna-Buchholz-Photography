@@ -202,6 +202,34 @@ div.circle {
   background-color: #5982a0;
 }
 
+div.page {
+  font-size: 22px;
+  position: fixed;
+  bottom: 36px;
+  right: 36px;
+}
+
+div.pixels {
+  font-size: 22px;
+  position: fixed;
+  bottom: 36px;
+  left: 36px;
+}
+
+span {
+  font-size: 14px;
+}
+
+div.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background-color: #333333;
+  z-index: 1;
+}
+
 section.s2 {
   background-color: #c5c5c5;
 }
