@@ -164,6 +164,7 @@ header {
   top: 36px;
   left: 36px;
   z-index: 1;
+  transition: color 0.5s;
 }
 
 section {
@@ -228,6 +229,7 @@ div.progress {
   height: 5px;
   background-color: #333333;
   z-index: 1;
+  transition: background-color 0.5s;
 }
 
 section.s2 {
@@ -264,6 +266,14 @@ section.s4 div.square {
 
 section.s4 div.circle {
   background-color: #5982a0;
+}
+
+header.white {
+  color: #fff;
+}
+
+div.progress.white {
+  background-color: #fff;
 }
 
 /* @media (max-width: 850px) {

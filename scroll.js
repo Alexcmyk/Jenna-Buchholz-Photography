@@ -22,4 +22,30 @@ document.addEventListener("scroll", function () {
 
 document.addEventListener("scroll", function () {
   const pixels = window.pageYOffset;
+  const pageHeight = bodyTag.getBoundingClientRect().height;
+  const totalScrollableDistance = pageHeight - window.innerHeight;
+
+  const percentage = pixels / totalScrollableDistance;
+  progressTag.style.width = `${100 * percentage}%`;
+});
+
+// Page Progress
+
+document.addEventListener("scroll", function () {
+  const pixels = window.pageYOffset;
+
+  sections.forEach((section) => {
+    if (section.offsetTop - 100 <= pixels) {
+      clientTag.innerHTML = section.getAttribute("data-client");
+      pageTag.innerHTML = section.getAttribute("data-page");
+
+      if (section.hasAttribute("data-is-dark")) {
+        headerTag.classList.add("white");
+        progressTag.classList.add("white");
+      } else {
+        headerTag.classList.remove("white");
+        progressTag.classList.remove("white");
+      }
+    }
+  });
 });
