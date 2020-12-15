@@ -6,6 +6,8 @@ const clientTag = document.querySelector("div.client");
 const pageTag = document.querySelector("div.page");
 const headerTag = document.querySelector("header");
 
+// Scroll pixel tag update
+
 document.addEventListener("scroll", function () {
   const pixels = window.pageYOffset;
 
@@ -14,18 +16,30 @@ document.addEventListener("scroll", function () {
   } else {
     pixelsTag.innerHTML = `${pixels} <span>pixels</span>`;
   }
+});
 
+// Progress bar scroll
+
+document.addEventListener("scroll", function () {
+  const pixels = window.pageYOffset;
   const pageHeight = bodyTag.getBoundingClientRect().height;
-  const totalScroll = pageHeight - window.innerHeight;
-  const percentage = pixels / totalScroll;
+  const totalScrollableDistance = pageHeight - window.innerHeight; // viewport window height
+
+  const percentage = pixels / totalScrollableDistance;
   progressTag.style.width = `${100 * percentage}%`;
+});
+
+// Page Progress
+
+document.addEventListener("scroll", function () {
+  const pixels = window.pageYOffset;
 
   sections.forEach((section) => {
     if (section.offsetTop - 100 <= pixels) {
       clientTag.innerHTML = section.getAttribute("data-client");
       pageTag.innerHTML = section.getAttribute("data-page");
 
-      if (section.hasAttribute("data-dark")) {
+      if (section.hasAttribute("data-is-dark")) {
         headerTag.classList.add("white");
         progressTag.classList.add("white");
       } else {
@@ -36,6 +50,8 @@ document.addEventListener("scroll", function () {
   });
 });
 
+// Parallax scroll
+
 document.addEventListener("scroll", function () {
   const topViewport = window.pageYOffset;
   const midViewport = topViewport + window.innerHeight / 2;
@@ -43,7 +59,6 @@ document.addEventListener("scroll", function () {
     const topSection = section.offsetTop;
     const midSection = topSection + section.offsetHeight / 2;
     const distanceToSection = midViewport - midSection;
-    console.log(distanceToSection);
 
     const parallaxTags = section.querySelectorAll("[data-parallax]");
 

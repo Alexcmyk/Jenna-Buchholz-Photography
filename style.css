@@ -155,22 +155,8 @@ body {
   font-family: "HK Grotesk", Arial;
   font-size: 36px;
   line-height: 1.25;
-  color: #333333;
-}
-
-div.progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 4px;
-  width: 0;
-  background-color: #d6ac35;
-  z-index: 1;
-  transition: background-color 0.2s ease-in;
-}
-
-div.progress.white {
   background-color: #fff;
+  color: #333333;
 }
 
 header {
@@ -178,27 +164,43 @@ header {
   top: 36px;
   left: 36px;
   z-index: 1;
-  transition: color 0.2s ease-in;
-}
-
-header.white {
-  color: #fff;
+  transition: color 0.5s;
 }
 
 section {
   background-color: #c8dee0;
   min-height: 100vh;
+  padding: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 80px;
 }
 
-div.pixels {
-  font-size: 22px;
-  position: fixed;
-  bottom: 36px;
-  left: 36px;
+div.content {
+  position: relative;
+}
+
+div.content img {
+  position: relative;
+}
+
+div.square {
+  position: absolute;
+  top: 50px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  background-color: #d54156;
+}
+
+div.circle {
+  position: absolute;
+  right: -50px;
+  bottom: 50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #5982a0;
 }
 
 div.page {
@@ -208,54 +210,38 @@ div.page {
   right: 36px;
 }
 
-div.client {
-  font-size: 25px;
+div.pixels {
+  font-size: 22px;
+  position: fixed;
+  bottom: 36px;
+  left: 36px;
 }
 
 span {
   font-size: 14px;
 }
 
-div.pixels span.white {
-  color: #fff;
+div.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background-color: #333333;
+  z-index: 1;
+  transition: background-color 0.5s;
 }
-
-div.content {
-  position: relative;
-}
-
-div.square {
-  position: absolute;
-  top: 50px;
-  width: 100px;
-  height: 100px;
-  background-color: #d54156;
-  left: -50px;
-}
-
-section.s2 div.content img,
-section.s4 div.content img {
-  max-width: 800px;
-}
-
-div.content img {
-  position: relative;
-}
-
-div.circle {
-  position: absolute;
-  bottom: 50px;
-  right: -50px;
-  width: 100px;
-  height: 100px;
-  background-color: #5982a0;
-  border-radius: 50%;
-}
-
-/* Section Two */
 
 section.s2 {
   background-color: #c5c5c5;
+}
+
+section.s3 {
+  background-color: #292121;
+}
+
+section.s4 {
+  background-color: #f3f1f2;
 }
 
 section.s2 div.square {
@@ -266,24 +252,12 @@ section.s2 div.circle {
   background-color: #be3c52;
 }
 
-/* Section Three */
-
-section.s3 {
-  background-color: #292121;
-}
-
 section.s3 div.square {
   background-color: #5f3736;
 }
 
 section.s3 div.circle {
   background-color: #6e5f67;
-}
-
-/* Section four */
-
-section.s4 {
-  background-color: #f3f1f2;
 }
 
 section.s4 div.square {
@@ -294,7 +268,15 @@ section.s4 div.circle {
   background-color: #5982a0;
 }
 
-@media (max-width: 850px) {
+header.white {
+  color: #fff;
+}
+
+div.progress.white {
+  background-color: #fff;
+}
+
+/* @media (max-width: 850px) {
   section.s2 div.content img,
   section.s4 div.content img {
     max-width: 600px;
@@ -347,4 +329,4 @@ section.s4 div.circle {
   section.s4 div.content img {
     max-width: 320px;
   }
-}
+} */
