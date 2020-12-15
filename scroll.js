@@ -23,7 +23,7 @@ document.addEventListener("scroll", function () {
 document.addEventListener("scroll", function () {
   const pixels = window.pageYOffset;
   const pageHeight = bodyTag.getBoundingClientRect().height;
-  const totalScrollableDistance = pageHeight - window.innerHeight;
+  const totalScrollableDistance = pageHeight - window.innerHeight; // viewport window height
 
   const percentage = pixels / totalScrollableDistance;
   progressTag.style.width = `${100 * percentage}%`;
@@ -47,5 +47,24 @@ document.addEventListener("scroll", function () {
         progressTag.classList.remove("white");
       }
     }
+  });
+});
+
+// Parallax scroll
+
+document.addEventListener("scroll", function () {
+  const topViewport = window.pageYOffset;
+  const midViewport = topViewport + window.innerHeight / 2;
+  sections.forEach((section) => {
+    const topSection = section.offsetTop;
+    const midSection = topSection + section.offsetHeight / 2;
+    const distanceToSection = midViewport - midSection;
+
+    const parallaxTags = section.querySelectorAll("[data-parallax]");
+
+    parallaxTags.forEach((tag) => {
+      const speed = parseFloat(tag.getAttribute("data-parallax"));
+      tag.style.transform = `translate(0, ${distanceToSection * speed}px`;
+    });
   });
 });

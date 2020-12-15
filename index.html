@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
@@ -15,43 +17,42 @@
   </head>
   <body>
     <div class="progress"></div>
-
     <header>
-      <h1>Jenna Bucholz Photographer</h1>
+      <h1>Jenna Buchholz Photography</h1>
       <div class="client">Alter Ego</div>
       <div class="page">1 / 2</div>
-      <div class="pixels">0</div>
+      <div class="pixels">0 <span></span></div>
     </header>
 
-    <section data-client="Alter Ego" data-page="1 / 2">
+    <section class="s1" data-client="Alter Ego" data-page="1 / 2">
       <div class="content">
-        <div class="square"></div>
-        <img src="./assets/image1.jpg" srcset="./assets/image1.jpg, ./assets/image1-2x.jpg 2x" alt="Image of man in coat" />
-        <div class="circle"></div>
+        <div class="square" data-parallax="0.1"></div>
+        <img src="./assets/image1.jpg" srcset="./assets/image1.jpg, ./assets/image1-2x.jpg 2x" alt="Photo of Alter Ego client work" />
+        <div class="circle" data-parallax="-0.1"></div>
       </div>
     </section>
 
     <section class="s2" data-client="Alter Ego" data-page="2 / 2">
       <div class="content">
-        <div class="circle"></div>
-        <img src="./assets/image2.jpg" srcset="./assets/image2.jpg, ./assets/image2-2x.jpg 2x" alt="Image of man in coat" />
-        <div class="square"></div>
+        <div class="circle" data-parallax="-0.2"></div>
+        <img src="./assets/image2.jpg" srcset="./assets/image2.jpg, ./assets/image2-2x.jpg 2x" alt="Photo of Alter Ego client work" />
+        <div class="square" data-parallax="0.2"></div>
       </div>
     </section>
 
-    <section class="s3" data-client="Valencia Clothing" data-page="1 / 2" data-is-dark="yes">
+    <section class="s3" data-client="Valencia" data-page="1 / 2" data-dark="yes">
       <div class="content">
-        <div class="circle"></div>
-        <img src="./assets/image3.jpg" srcset="./assets/image3.jpg, ./assets/image3-2x.jpg 2x" alt="Image of man in coat" />
-        <div class="square"></div>
+        <div class="circle" data-parallax="0.2"></div>
+        <img src="./assets/image3.jpg" srcset="./assets/image3.jpg, ./assets/image3-2x.jpg 2x" alt="Photo of Alter Ego client work" />
+        <div class="square" data-parallax="-0.2"></div>
       </div>
     </section>
 
-    <section class="s4" data-client="Valencia Clothing" data-page="2 / 2">
+    <section class="s4" data-client="Valencia" data-page="2 / 2">
       <div class="content">
-        <div class="circle"></div>
-        <img src="./assets/image4.jpg" srcset="./assets/image4.jpg, ./assets/image4-2x.jpg 2x" alt="Image of man in coat" />
-        <div class="square"></div>
+        <div class="square" data-parallax="0.1"></div>
+        <img src="./assets/image2.jpg" srcset="./assets/image4.jpg, ./assets/image4-2x.jpg 2x" alt="Photo of Alter Ego client work" />
+        <div class="circle" data-parallax="-0.25"></div>
       </div>
     </section>
 
